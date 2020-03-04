@@ -1,0 +1,25 @@
+@import 'abstracts/abstracts';
+@import 'base/base';
+@import 'components/components';
+@import 'layout/layout';
+
+h1 {
+  margin: 10px;
+  padding: 10px;
+  font-size: 50px;
+}
+
+.regular {
+  font-family: $regularDemiFont;
+  font-weight: $regular;
+}
+
+.demi {
+  font-family: $regularDemiFont;
+  font-weight: $demi;
+}
+
+.bold {
+  font-family: $boldFont;
+  font-weight: $bold;
+}

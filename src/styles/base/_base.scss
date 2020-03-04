@@ -1,0 +1,14 @@
+@import 'reset';
+@import 'fonts';
+@import 'helpers';
+
+html,
+body {
+  position: relative;
+  font-family: $regularDemiFont;
+  color: $primaryFontColor;
+  font-size: $mainFontSize;
+  line-height: $mainLineHeight;
+  font-weight: $regular;
+  scroll-behavior: smooth;
+}

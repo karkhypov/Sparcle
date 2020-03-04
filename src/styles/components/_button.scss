@@ -1,0 +1,16 @@
+.button {
+  @include size(160px, 45px);
+  // color: ;
+  // background-color: ;
+  border-radius: 50%;
+  transition: 0.3s linear;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
