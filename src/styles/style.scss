@@ -10,16 +10,13 @@ h1 {
 }
 
 .regular {
-  font-family: $regularDemiFont;
-  font-weight: $regular;
+  @include font(regular);
 }
 
 .demi {
-  font-family: $regularDemiFont;
-  font-weight: $demi;
+  @include font(demi);
 }
 
 .bold {
-  font-family: $boldFont;
-  font-weight: $bold;
+  @include font(bold);
 }

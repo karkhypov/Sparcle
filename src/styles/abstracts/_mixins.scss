@@ -3,3 +3,16 @@
   width: $width;
   height: $height;
 }
+
+@mixin font($font) {
+  @if $font == regular {
+    font-family: $regularDemiFont;
+    font-weight: $regular;
+  } @else if $font == demi {
+    font-family: $regularDemiFont;
+    font-weight: $demi;
+  } @else if $font == bold {
+    font-family: $boldFont;
+    font-weight: $bold;
+  }
+}
