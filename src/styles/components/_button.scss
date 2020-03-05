@@ -1,16 +1,41 @@
-.button {
-  @include size(160px, 45px);
-  // color: ;
-  // background-color: ;
-  border-radius: 50%;
-  transition: 0.3s linear;
+$height: 45px;
+$width: 160px;
+
+.btn1,
+.btn2 {
+  @include font(demi);
+  font-size: 15px;
+  @include size($width, $height);
+  border: 1px solid;
+  border-radius: calc(#{$height}/ 2);
+  transition: transform 0.2s linear;
   cursor: pointer;
 
   &:hover {
-    opacity: 0.8;
+    transform: scale(1.05);
   }
 
   &:active {
     transform: scale(0.9);
+  }
+}
+
+.btn1 {
+  color: $secondaryColor;
+  background-color: $secondaryColorLightest;
+  border-color: $secondaryColorLighter;
+
+  a {
+    color: $secondaryColor;
+  }
+}
+
+.btn2 {
+  color: $primaryFontColor;
+  background-color: transparent;
+  border-color: $primaryColor;
+
+  a {
+    color: $primaryFontColor;
   }
 }
