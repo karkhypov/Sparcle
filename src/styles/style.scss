@@ -2,21 +2,3 @@
 @import 'base/base';
 @import 'components/components';
 @import 'layout/layout';
-
-h1 {
-  margin: 10px;
-  padding: 10px;
-  font-size: 50px;
-}
-
-.regular {
-  @include font(regular);
-}
-
-.demi {
-  @include font(demi);
-}
-
-.bold {
-  @include font(bold);
-}
