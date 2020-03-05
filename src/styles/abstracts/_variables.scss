@@ -4,7 +4,7 @@ $boldFont: 'AvenirNext LT Pro Bold', Helvetica, Arial, sans-serif;
 
 // font-sizes
 $mainFontSize: 18px;
-$mainLineHeight: 1.4;
+$mainLineHeight: 1.6;
 
 // font-weight
 $regular: 400;
@@ -19,10 +19,12 @@ $smTableWidth: 640px;
 $phoneWidth: 480px;
 $smPhoneWidth: 320px;
 
+$maxWidth: 1040px;
+
 // colors
 $primaryColor: #273164;
 
-$secondaryColor: #f5723a;
+$secondaryColor: #f45e1f;
 $secondaryColorLighter: #f5c2ae;
 $secondaryColorLightest: #fff9f6;
 
@@ -30,4 +32,5 @@ $headerFontColor: #fff;
 $primaryFontColor: #676f92;
 $secondaryFontColor: #b4b4b4;
 
+$backGround: #fafbfd;
 $sectionBackground: #f6f7fb;
