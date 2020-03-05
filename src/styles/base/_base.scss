@@ -5,10 +5,9 @@
 html,
 body {
   position: relative;
-  font-family: $regularDemiFont;
+  @include font(regular);
   color: $primaryFontColor;
   font-size: $mainFontSize;
   line-height: $mainLineHeight;
-  font-weight: $regular;
   scroll-behavior: smooth;
 }
