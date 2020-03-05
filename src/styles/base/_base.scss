@@ -6,8 +6,9 @@ html,
 body {
   position: relative;
   @include font(regular);
-  color: $primaryFontColor;
   font-size: $mainFontSize;
   line-height: $mainLineHeight;
+  color: $primaryFontColor;
+  background-color: $backGround;
   scroll-behavior: smooth;
 }
