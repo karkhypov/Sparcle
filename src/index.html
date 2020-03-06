@@ -10,148 +10,180 @@
   </head>
   <body>
     <header>
-      <nav class="nav">
-        <div class="nav-logo">sparcle.</div>
-        <ul class="nav-menu">
-          <li class="nav-menu__item"><a href="#">Our services</a></li>
-          <li class="nav-menu__item"><a href="#">Why hire us</a></li>
-          <li class="nav-menu__item"><a href="#">Booking</a></li>
-          <li class="nav-menu__item"><a href="#">Testimonials</a></li>
-          <li class="nav-menu__item"><a href="#">Contacts</a></li>
-        </ul>
-        <button class="button nav-button">
-          <a href="#">Request a Quote</a>
-        </button>
-      </nav>
+      <div class="container">
+        <nav class="nav">
+          <div class="nav-logo">sparcle.</div>
+          <ul class="nav-menu">
+            <li class="nav-menu__item"><a href="#services">Our services</a></li>
+            <li class="nav-menu__item"><a href="#hireUs">Why hire us</a></li>
+            <li class="nav-menu__item"><a href="#careers">Careers</a></li>
+            <li class="nav-menu__item"><a href="#booking">Booking</a></li>
+            <li class="nav-menu__item"><a href="#testimonials">Testimonials</a></li>
+            <li class="nav-menu__item"><a href="#contacts">Contacts</a></li>
+          </ul>
+          <button class="btn1 nav-button">
+            <a href="#">Request a Quote</a>
+          </button>
+        </nav>
 
-      <div class="hero">
-        <h1 class="hero-heading">Professional cleaning services</h1>
-        <p class="hero-text">
-          Enjoy a better house cleaning experience. All of our cleaners are stringently vetted and have their cleaning ability fully tested.
-        </p>
-        <button class="button hero-button">
-          <a href="#">Get started</a>
-        </button>
-        <button class="button hero-button">
-          <a href="#">
-            <svg class="hero-button__icon">
-              <use xlink:href="images/svg-sprite.svg#map-marker"></use>
-            </svg>
-            Locations
-          </a>
-        </button>
+        <div class="hero">
+          <h1 class="hero-heading">Professional cleaning services</h1>
+          <p class="hero-text">
+            Enjoy a better house cleaning experience. All of our cleaners<br />
+            are stringently vetted and have their cleaning ability fully<br />
+            tested.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn1">
+              <a href="#">Get started</a>
+            </button>
+            <button class="btn2">
+              <a href="#">
+                <svg class="hero-buttons__icon">
+                  <use xlink:href="images/svg-sprite.svg#map-marker"></use>
+                </svg>
+                Locations
+              </a>
+            </button>
+          </div>
+        </div>
+
+        <a href="#services" class="arrow">
+          <svg>
+            <use xlink:href="images/svg-sprite.svg#arrow"></use>
+          </svg>
+        </a>
       </div>
     </header>
 
     <main>
-      <section class="services">
-        <div class="service-card">
-          <svg class="service-icon">
+      <section id="services" class="services container">
+        <div class="services-card">
+          <svg class="services-icon">
             <use xlink:href="images/svg-sprite.svg#house"></use>
           </svg>
-          <h3 class="service-heading">House cleaning</h3>
-          <p class="service-text">
-            Sparcle provides a professional house cleaning service dedicated to making the lives of our clients safer, greener and cleaner.
+          <h3 class="services-heading">House cleaning</h3>
+          <p class="services-text">
+            Sparcle provides a professional house cleaning services dedicated to making the lives of our clients safer, greener and cleaner.
           </p>
-          <a href="#" class="service-link">Book online now</a>
+          <a href="#" class="services-link">Book online now</a>
         </div>
 
-        <div class="service-card">
-          <svg class="service-icon">
+        <div class="services-card">
+          <svg class="services-icon">
             <use xlink:href="images/svg-sprite.svg#brush"></use>
           </svg>
-          <h3 class="service-heading">Commercial cleaning</h3>
-          <p class="service-text">
+          <h3 class="services-heading">Commercial cleaning</h3>
+          <p class="services-text">
             Sparcle provides a professional office cleaning service dedicated to making the lives of our clients safer, greener and cleaner.
           </p>
-          <a href="#" class="service-link">Get a quote</a>
+          <a href="#" class="services-link">Get a quote</a>
         </div>
       </section>
 
-      <section class="why-hire-us">
-        <h2 class="why-hire-us__heading">A new way of cleaning</h2>
-        <div class="left">
-          <p class="why-hire-us__text">
-            We clean to such a high level that you’ll never even need to use our unique re-clean guarantee! This gives you peace of mind and saves you
-            time.
-          </p>
-        </div>
-        <div class="right">
-          <p class="why-hire-us__text">
-            We love house cleaning and want to share with you its many benefits. Having our house cleaning services is about having the utmost
-            professional people in your home, people you can trust and count on.
-          </p>
-          <p class="why-hire-us__text">
-            When you choose Sparcle, you know you will be coming home with the peace of mind that only all natural cleaning products were used, making
-            your home safe for your family, your pets and the planet.
-          </p>
+      <section id="hireUs" class="hire-us container">
+        <h2 class="hire-us__heading">A new way of cleaning</h2>
+        <div class="hire-us__text-blocks">
+          <div class="hire-us__text-block">
+            <p class="hire-us__text">
+              We clean to such a high level that you’ll never even need to use our unique re-clean guarantee!
+              <span>This gives you peace of mind and saves your time.</span>
+            </p>
+          </div>
+          <div class="hire-us__text-block">
+            <p class="hire-us__text">
+              We love house cleaning and want to share with you its many benefits. Having our house cleaning services is about having the utmost
+              professional people in your home, people you can trust and count on.
+            </p>
+            <p class="hire-us__text">
+              When you choose <span>Sparcle</span>, you know you will be coming home with the peace of mind that only all natural cleaning products
+              were used, making your home safe for your family, your pets and the planet.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section class="vacancies">
-        <img src="images/woman.jpg" alt="happy woman in the clean house" class="vacancies-img" />
-        <h3 class="vacancies-heading__secondary">become part of the team</h3>
-        <h2 class="vacancies-heading__primary">Professional cleaning service of the year</h2>
-        <p class="vacancies-text">
-          At Sparcle our entire philosophy is based on hiring warm people, not warm bodies. We know that you only want the best.
-        </p>
-        <ul class="vacancies-guaranties">
-          <li class="vacancies-guaranties__text">Satisfaction guaranteed</li>
-          <li class="vacancies-guaranties__text">Above average incomes</li>
-        </ul>
+      <section id="careers" class="careers">
+        <div class="container">
+          <div class="careers-content">
+            <div class="careers-images">
+              <img src="images/woman.jpg" alt="happy woman in the clean house" class="careers-image" />
+              <img src="images/dots.png" alt="decorative dots" class="careers-image__dots" />
+            </div>
+            <h3 class="careers-heading__secondary">become part of the team</h3>
+            <h2 class="careers-heading__primary">
+              Professional cleaning service<br />
+              of the year
+            </h2>
+            <p class="careers-text">
+              At <span>Sparcle</span> our entire philosophy is based on hiring warm people, not warm bodies. We know that you only want the best.
+            </p>
+            <ul class="careers-guaranties">
+              <li class="careers-guaranties__text">Satisfaction guaranteed</li>
+              <li class="careers-guaranties__text">Above average incomes</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
-      <section class="booking">
-        <div>
-          <h3 class="booking-heading--secondary">select your service</h3>
-          <h2 class="booking-heading--primary">Book online</h2>
+      <section id="booking" class="booking container">
+        <div class="booking-info-section">
+          <h3 class="booking-heading__secondary">select your service</h3>
+          <h2 class="booking-heading__primary">Book online</h2>
           <p class="booking-text">
-            Choose the type of cleaning that suits you the most. After that you just have to specify number of rooms and you are good to go.
+            Choose the type of cleaning that suits you the most.<br />
+            After that you just have to specify number of rooms and<br />
+            you are good to go.
           </p>
           <div class="booking-type">
             <p class="booking-type__heading">Type of cleaning</p>
-            <button class="button booking-button">Residential</button>
-            <button class="button booking-button">Commercial</button>
+            <button class="btn1">Residential</button>
+            <button class="btn2">Commercial</button>
           </div>
           <div class="booking-options">
             <div class="booking-option">
               <p class="booking-option__heading">Number of bedrooms</p>
-              <button class="booking-option__button">
-                <svg>
-                  <use xlink:href="images/svg-sprite.svg#minus"></use>
-                </svg>
-              </button>
-              <div class="booking-option__value">4</div>
-              <button class="booking-option__button">
-                <svg>
-                  <use xlink:href="images/svg-sprite.svg#plus"></use>
-                </svg>
-              </button>
+              <div class="booking-option__switches">
+                <button class="booking-option__button">
+                  <svg>
+                    <use xlink:href="images/svg-sprite.svg#minus"></use>
+                  </svg>
+                </button>
+                <div class="booking-option__value">4</div>
+                <button class="booking-option__button">
+                  <svg>
+                    <use xlink:href="images/svg-sprite.svg#plus"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
             <div class="booking-option">
               <p class="booking-option__heading">Number of bathrooms</p>
-              <button class="booking-option__button">
-                <svg>
-                  <use xlink:href="images/svg-sprite.svg#minus"></use>
-                </svg>
-              </button>
-              <div class="booking-option__value">2</div>
-              <button class="booking-option__button">
-                <svg>
-                  <use xlink:href="images/svg-sprite.svg#plus"></use>
-                </svg>
-              </button>
+              <div class="booking-option__switches">
+                <button class="booking-option__button">
+                  <svg>
+                    <use xlink:href="images/svg-sprite.svg#minus"></use>
+                  </svg>
+                </button>
+                <div class="booking-option__value">2</div>
+                <button class="booking-option__button">
+                  <svg>
+                    <use xlink:href="images/svg-sprite.svg#plus"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        <div>
+
+        <div class="booking-form-section">
           <div class="booking-subtotal">
             <h2 class="booking-subtotal__heading">
               Subtotal
               <span class="booking-subtotal__price">130,00$</span>
             </h2>
             <p class="booking-subtotal__text">
-              <span class="booking-subtotal__type">Residential Cleaning</span>
+              <span class="booking-subtotal__type">Residential Cleaning - </span>
               <span class="booking-subtotal__hours">5 hours</span>
             </p>
             <p class="booking-subtotal__text">
@@ -160,85 +192,102 @@
               <span class="booking-subtotal__bathrooms">2 bathrooms</span>
             </p>
           </div>
-        </div>
-
-        <div class="booking-form">
-          <form action="POST" autocomplete="off">
-            <p class="booking-form__fullname">your full name</p>
-            <input type="text" placeholder="your full name" />
-            <input type="phone" placeholder="Enter your phone number" />
-            <input type="email" placeholder="Enter your email address" />
-            <button type="submit">Continue booking ></button>
-          </form>
+          <div class="booking-form">
+            <form action="POST" autocomplete="off">
+              <div class="booking-form__inputs">
+                <p class="booking-form__fullname">your full name</p>
+                <input type="text" placeholder="Vid Kraljić Radulović" required />
+                <input
+                  type="tel"
+                  placeholder="Enter your phone number"
+                  pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}"
+                  title="Phone Number (Format: +99(99)9999-9999)"
+                  required
+                />
+                <input type="email" placeholder="Enter your email address" required />
+              </div>
+              <button type="submit">
+                Continue booking
+                <svg class="hero-buttons__icon">
+                  <use xlink:href="images/svg-sprite.svg#arrow"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
       </section>
 
-      <section class="testimonials">
-        <h2 class="testimonials-heading">What our customers say</h2>
+      <section id="testimonials" class="testimonials">
+        <div class="container">
+          <h2 class="testimonials-heading">What our customers say</h2>
 
-        <div class="testimonials-cards">
-          <div class="testimonials-card">
-            <img src="images/customer1.png" alt="customer photo" class="testimonials-image" />
-            <p class="testimonials-text">
-              “There is no better feeling than walking into a super clean home, and knowing that someone else took time to do it :)”
-            </p>
-            <div class="testimonials-customer">
-              <p class="testimonials-customer__name">Paula Radanović</p>
-              <p class="testimonials-customer__city">Zagreb</p>
+          <div class="testimonials-cards">
+            <div class="testimonials-card">
+              <img src="images/customer1.png" alt="customer photo" class="testimonials-image" />
+              <p class="testimonials-text">
+                “There is no better feeling than walking into a super clean home, and knowing that someone else took time to do it :)”
+              </p>
+              <div class="testimonials-customer">
+                <p class="testimonials-customer__name">Paula Radanović</p>
+                <p class="testimonials-customer__city">Zagreb</p>
+              </div>
+            </div>
+
+            <div class="testimonials-card">
+              <img src="images/customer2.png" alt="customer photo" class="testimonials-image" />
+              <p class="testimonials-text">
+                “Super fast hard workers! Polite and friendly! Highly recommend the odd jobers if you need a job done fast and done right!”
+              </p>
+              <div class="testimonials-customer">
+                <p class="testimonials-customer__name">Kristina Rašić</p>
+                <p class="testimonials-customer__city">Samobor</p>
+              </div>
+            </div>
+
+            <div class="testimonials-card">
+              <img src="images/customer3.png" alt="customer photo" class="testimonials-image" />
+              <p class="testimonials-text">
+                “They absolutely make my life better! They have a checklist for what is cleaned so that you know that it will be the same deep,
+                thorough cleaning every time.
+              </p>
+              <div class="testimonials-customer">
+                <p class="testimonials-customer__name">Anamarija Benković</p>
+                <p class="testimonials-customer__city">Osijek</p>
+              </div>
             </div>
           </div>
 
-          <div class="testimonials-card">
-            <img src="images/customer2.png" alt="customer photo" class="testimonials-image" />
-            <p class="testimonials-text">
-              “Super fast hard workers! Polite and friendly! Highly recommend the odd jobers if you need a job done fast and done right!”
-            </p>
-            <div class="testimonials-customer">
-              <p class="testimonials-customer__name">Kristina Rašić</p>
-              <p class="testimonials-customer__city">Samobor</p>
+          <div class="testimonials-submit">
+            <h3 class="testimonials-submit__heading">Your questions and comment are important to us.</h3>
+            <div class="testimonials-submit__buttons">
+              <button class="btn1">Call our service</button>
+              <button class="btn2">Email us</button>
             </div>
-          </div>
-
-          <div class="testimonials-card">
-            <img src="images/customer3.png" alt="customer photo" class="testimonials-image" />
-            <p class="testimonials-text">
-              “They absolutely make my life better! So professional and organized. They have a checklist for what is cleaned so that you know that it
-              will be the same deep, thorough cleaning every time.
-            </p>
-            <div class="testimonials-customer">
-              <p class="testimonials-customer__name">Anamarija Benković</p>
-              <p class="testimonials-customer__city">Osijek</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonials-submit">
-          <h3 class="testimonials-submit__heading">Your questions and comment are important to us.</h3>
-          <div class="testimonials-submit__buttons">
-            <button class="button">Call our service</button>
-            <button class="button">Email us</button>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <ul class="footer">
+    <footer class="container">
+      <ul id="contacts" class="footer">
         <li class="footer-section">
           <h4 class="footer-heading__primary">Sparcle.</h4>
-          <p class="footer-text">Enjoy a better cleaning experience with us.</p>
+          <ul>
+            <li class="footer-text">Enjoy a better cleaning</li>
+            <li class="footer-text">experience with us.</li>
+          </ul>
           <ul class="footer-social">
-            <li class="footer-icon">
+            <li class="footer-social__icon">
               <svg>
                 <use xlink:href="images/svg-sprite.svg#facebook"></use>
               </svg>
             </li>
-            <li class="footer-icon">
+            <li class="footer-social__icon">
               <svg>
                 <use xlink:href="images/svg-sprite.svg#twitter"></use>
               </svg>
             </li>
-            <li class="footer-icon">
+            <li class="footer-social__icon">
               <svg>
                 <use xlink:href="images/svg-sprite.svg#linkedin"></use>
               </svg>
@@ -273,13 +322,13 @@
             <li class="footer-text">10000 Zagreb</li>
             <li class="footer-text">01 23 95 313</li>
             <li class="footer-text">
-              <a href="#" class="footer-section__link">hello@sparcle.co</a>
+              <a href="#" class="footer-mail">hello@sparcle.co</a>
             </li>
           </ul>
         </li>
       </ul>
 
-      <p class="footer-copyright">Copyright Sparcle. Team d.o.o., All Rights Reserved</p>
+      <p class="footer-copyright">Copyright Sparcle. Team d.o.o. All Rights Reserved</p>
     </footer>
   </body>
 </html>
