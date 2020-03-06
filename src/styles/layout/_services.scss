@@ -1,0 +1,54 @@
+.services {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 810px;
+  margin: 0 auto;
+  padding-top: 75px;
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include size(330px);
+    margin: 0 auto;
+    margin-top: 25px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+
+    &:last-child {
+      background-color: $primaryColor;
+
+      .services-icon {
+        fill: white;
+      }
+      .services-heading,
+      .services-text {
+        color: white;
+      }
+    }
+  }
+
+  &-icon {
+    @include size(52px);
+    fill: $secondaryColor;
+  }
+
+  &-heading {
+    text-transform: none;
+    font-size: rem(24px);
+    padding-top: 15px;
+  }
+
+  &-text {
+    color: $secondaryFontColor;
+  }
+
+  &-link {
+    color: $secondaryColor;
+    font-size: 13px;
+    text-decoration: underline;
+    padding-top: 15px;
+  }
+}

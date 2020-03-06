@@ -1,0 +1,70 @@
+.testimonials {
+  min-height: 1075px;
+  padding: 130px 0;
+  background-color: $sectionBackground;
+  overflow-x: hidden;
+
+  &-heading {
+    margin-bottom: 60px;
+  }
+
+  &-cards {
+    display: flex;
+    width: 100vw;
+    margin-bottom: 150px;
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include size(400px);
+    margin-right: 100px;
+    padding: 30px;
+    padding-top: 50px;
+    background-color: $backGround;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+  &-image {
+    display: block;
+    @include size(65px);
+    margin-top: 10px;
+  }
+
+  &-text {
+    @include font(demi);
+    font-size: rem(20px);
+    line-height: 1.5;
+  }
+
+  &-customer {
+    &__name {
+      @include font(demi);
+      color: $secondaryColor;
+    }
+
+    &__city {
+      color: $secondaryFontColor;
+    }
+  }
+
+  &-submit {
+    &__heading,
+    &__buttons {
+      text-align: center;
+    }
+
+    &__heading {
+      font-size: rem(25px);
+      text-transform: none;
+      color: $primaryColor;
+      margin-bottom: 50px;
+    }
+
+    button:first-child {
+      margin-right: 25px;
+    }
+  }
+}

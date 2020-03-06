@@ -1,0 +1,64 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  min-height: 530px;
+  padding-top: 150px;
+
+  &-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
+  }
+
+  &-heading {
+    &__primary,
+    &__secondary {
+      display: flex;
+      align-items: center;
+      height: 30px;
+      margin-bottom: 15px;
+      @include font(demi);
+    }
+
+    &__primary {
+      font-size: rem(30px);
+    }
+
+    &__secondary {
+      font-size: rem(22px);
+    }
+  }
+
+  &-social {
+    display: flex;
+    margin-top: 20px;
+
+    &__icon {
+      margin-right: 24px;
+
+      svg {
+        @include size(30px);
+      }
+    }
+  }
+
+  &-text {
+    @include font(demi);
+    font-size: rem(14px);
+    opacity: 0.7;
+    margin-bottom: 5px;
+  }
+
+  &-mail {
+    text-decoration: underline;
+    color: $secondaryColor;
+  }
+
+  &-copyright {
+    display: flex;
+    align-items: center;
+    height: 78px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+  }
+}
