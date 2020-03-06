@@ -1,14 +1,3 @@
 @import 'reset';
 @import 'fonts';
 @import 'helpers';
-
-html,
-body {
-  position: relative;
-  @include font(regular);
-  font-size: $mainFontSize;
-  line-height: $mainLineHeight;
-  color: $primaryFontColor;
-  background-color: $backGround;
-  scroll-behavior: smooth;
-}

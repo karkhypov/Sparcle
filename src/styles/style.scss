@@ -2,3 +2,34 @@
 @import 'base/base';
 @import 'components/components';
 @import 'layout/layout';
+
+html,
+body {
+  position: relative;
+  @include font(regular);
+  font-size: $mainFontSize;
+  line-height: $mainLineHeight;
+  color: $primaryColor;
+  background-color: $backGround;
+  scroll-behavior: smooth;
+}
+
+h2,
+h3 {
+  @include font(demi);
+  line-height: $headerLineHeight;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: $secondaryColor;
+}
+
+p {
+  font-size: 0.8rem;
+}
