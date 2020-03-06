@@ -4,7 +4,7 @@ $width: 160px;
 .btn1,
 .btn2 {
   @include font(demi);
-  font-size: 15px;
+  font-size: rem(15px);
   @include size($width, $height);
   border: 1px solid;
   border-radius: calc(#{$height}/ 2);
