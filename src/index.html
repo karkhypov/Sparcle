@@ -10,8 +10,8 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <nav class="nav">
+      <div class="nav-wrapper">
+        <nav class="nav container">
           <div class="nav-logo">sparcle.</div>
           <ul class="nav-menu">
             <li class="nav-menu__item"><a href="#services">Our services</a></li>
@@ -21,17 +21,20 @@
             <li class="nav-menu__item"><a href="#testimonials">Testimonials</a></li>
             <li class="nav-menu__item"><a href="#contacts">Contacts</a></li>
           </ul>
-          <button class="btn1 nav-button">
-            <a href="#">Request a Quote</a>
-          </button>
-        </nav>
 
+          <div class="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="container">
         <div class="hero">
           <h1 class="hero-heading">Professional cleaning services</h1>
           <p class="hero-text">
-            Enjoy a better house cleaning experience. All of our cleaners<br />
-            are stringently vetted and have their cleaning ability fully<br />
-            tested.
+            Enjoy a better house cleaning experience. All of our cleaners are stringently vetted and have their cleaning ability fully tested.
           </p>
           <div class="hero-buttons">
             <button class="btn1">
@@ -47,13 +50,13 @@
             </button>
           </div>
         </div>
-
-        <a href="#services" class="arrow">
-          <svg>
-            <use xlink:href="images/svg-sprite.svg#arrow"></use>
-          </svg>
-        </a>
       </div>
+
+      <a href="#services" class="arrow">
+        <svg>
+          <use xlink:href="images/svg-sprite.svg#arrow"></use>
+        </svg>
+      </a>
     </header>
 
     <main>
@@ -81,21 +84,21 @@
         </div>
       </section>
 
-      <section id="hireUs" class="hire-us container">
-        <h2 class="hire-us__heading">A new way of cleaning</h2>
-        <div class="hire-us__text-blocks">
-          <div class="hire-us__text-block">
-            <p class="hire-us__text">
+      <section id="hireUs" class="hireUs container">
+        <h2 class="hireUs-heading">A new way of cleaning</h2>
+        <div class="hireUs-text-blocks">
+          <div class="hireUs-text-block">
+            <p class="hireUs-text">
               We clean to such a high level that you’ll never even need to use our unique re-clean guarantee!
               <span>This gives you peace of mind and saves your time.</span>
             </p>
           </div>
-          <div class="hire-us__text-block">
-            <p class="hire-us__text">
+          <div class="hireUs-text-block">
+            <p class="hireUs-text">
               We love house cleaning and want to share with you its many benefits. Having our house cleaning services is about having the utmost
               professional people in your home, people you can trust and count on.
             </p>
-            <p class="hire-us__text">
+            <p class="hireUs-text">
               When you choose <span>Sparcle</span>, you know you will be coming home with the peace of mind that only all natural cleaning products
               were used, making your home safe for your family, your pets and the planet.
             </p>
@@ -328,7 +331,10 @@
         </li>
       </ul>
 
-      <p class="footer-copyright">Copyright Sparcle. Team d.o.o. All Rights Reserved</p>
+      <p class="footer-copyright">
+        Copyright Sparcle. Team d.o.o.<br />
+        All Rights Reserved
+      </p>
     </footer>
   </body>
 </html>
