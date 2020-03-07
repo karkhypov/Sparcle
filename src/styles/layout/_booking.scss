@@ -1,12 +1,15 @@
 .booking {
   display: flex;
-  height: 100vh;
+  flex-wrap: wrap;
+  min-height: 100vh;
   padding-top: 120px;
   padding-bottom: 160px;
 
   &-info-section,
   &-form-section {
     @include size(500px, 445px);
+    margin: 0 auto;
+    margin-bottom: 30px;
   }
 
   &-form-section {
@@ -39,7 +42,7 @@
       color: $secondaryColor;
     }
 
-    button {
+    .btn1 {
       margin-right: 25px;
     }
   }
@@ -162,6 +165,62 @@
         svg {
           margin-left: 35px;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $maxPhoneWidth) {
+  .booking {
+    padding-top: 80px;
+    padding-bottom: 20px;
+
+    &-info-section,
+    &-form-section {
+      width: 100%;
+      height: auto;
+    }
+
+    &-form-section {
+      padding: 30px 20px;
+    }
+
+    &-heading {
+      &__secondary {
+        margin-bottom: 10px;
+      }
+
+      &__primary {
+        margin-bottom: 15px;
+      }
+    }
+
+    &-text {
+      margin-bottom: 30px;
+      padding-right: 15px;
+
+      br {
+        display: none;
+      }
+    }
+
+    &-type {
+      margin-bottom: 30px;
+
+      &__heading {
+        margin-bottom: 15px;
+      }
+
+      .btn1 {
+        margin-right: 10px;
+      }
+    }
+
+    &-option {
+      margin-right: 0;
+
+      &:first-child {
+        margin-right: 25px;
       }
     }
   }

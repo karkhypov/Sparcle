@@ -7,7 +7,6 @@ header {
   background-size: cover;
   min-height: 100vh;
   color: white;
-  border: 1px solid transparent;
 
   a {
     color: white;
@@ -34,6 +33,22 @@ header {
 
   .container {
     max-width: 1210px;
+  }
+
+  .nav-wrapper {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    transition: all 0.3s;
+  }
+
+  .show {
+    z-index: 1;
+    opacity: 1;
+    pointer-events: all;
+    margin: 0;
+    transition: opacity 0.4s;
   }
 
   .arrow {
@@ -64,6 +79,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   height: 50px;
   margin-top: 36px;
 
@@ -86,8 +102,6 @@ header {
     justify-content: space-between;
     align-items: center;
     @include size(540px, 100%);
-    margin-right: 60px;
-    margin-left: auto;
     border-bottom: 2px solid rgba(167, 168, 164, 0.2);
 
     &__item {
@@ -121,18 +135,19 @@ header {
 
 .hero {
   max-width: 700px;
-  margin-top: 165px;
-  margin-left: 70px;
+  padding-top: 220px;
+  margin-left: 7%;
 
   &-heading {
     @include font(bold);
-    font-size: 65px;
+    font-size: rem(65px);
     line-height: 1;
   }
 
   &-text {
     @include font(regular);
     font-size: rem(15px);
+    max-width: 425px;
     margin-top: 30px;
   }
 
@@ -142,5 +157,93 @@ header {
     .btn1 {
       margin-right: 25px;
     }
+  }
+}
+
+@media screen and (max-width: $maxPhoneWidth) {
+  .nav {
+    height: 50px;
+    margin-top: 0;
+    padding-bottom: 5px;
+    background-color: $primaryColorTranslucent;
+    overflow-y: hidden;
+
+    &-logo::after {
+      display: none;
+    }
+
+    &-menu {
+      z-index: -1;
+      display: flex;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 30px 0;
+      @include size(100%, calc(100vh - 50px));
+      background-color: $primaryColorTranslucent;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s, visibility 0.4s;
+
+      &__item {
+        @include size(100%, 8%);
+        font-size: 1.2rem;
+
+        &::after {
+          display: none;
+        }
+
+        a {
+          display: flex;
+          justify-content: center;
+          @include size(100%);
+          cursor: pointer;
+        }
+
+        &:hover a {
+          color: $secondaryColor;
+        }
+      }
+    }
+  }
+
+  .hero {
+    // padding-top: 160px;
+    padding-top: calc(100vh / 4);
+    margin-left: 0;
+
+    &-heading {
+      font-size: rem(52px);
+    }
+
+    &-text {
+      font-size: rem(13px);
+    }
+  }
+
+  .arrow svg {
+    transform: scale(0.75);
+  }
+}
+
+@media screen and (max-width: $maxPhoneWidth) and (orientation: landscape) {
+  .nav {
+    &-menu {
+      padding: 10px 0;
+
+      &__item {
+        height: 15%;
+      }
+    }
+  }
+
+  .hero {
+    padding-top: 70px;
+  }
+
+  .arrow svg {
+    display: none;
   }
 }

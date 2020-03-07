@@ -1,23 +1,23 @@
-.hire-us {
-  &__heading {
-    padding-top: 150px;
-    padding-bottom: 57px;
+.hireUs {
+  padding-top: 150px;
+
+  &-heading {
+    margin-bottom: 57px;
   }
 
-  &__text-blocks {
+  &-text-blocks {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-bottom: 165px;
   }
 
-  &__text-block {
+  &-text-block {
     display: flex;
     flex-direction: column;
     max-width: 450px;
   }
 
-  &__text {
+  &-text {
     color: $secondaryFontColor;
     margin-bottom: 35px;
 
@@ -27,6 +27,21 @@
 
     &:first-child span {
       text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: $maxPhoneWidth) {
+  .hireUs {
+    padding-top: 80px;
+
+    &-heading {
+      margin-bottom: 40px;
+    }
+
+    &-text {
+      margin-bottom: 25px;
+      padding-right: 12px;
     }
   }
 }

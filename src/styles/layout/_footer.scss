@@ -1,14 +1,21 @@
 .footer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   min-height: 530px;
   padding-top: 150px;
+
+  br {
+    display: none;
+  }
 
   &-section {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     height: 180px;
+    margin: 0 auto;
+    margin-bottom: 35px;
   }
 
   &-heading {
@@ -16,7 +23,7 @@
     &__secondary {
       display: flex;
       align-items: center;
-      height: 30px;
+      height: 35px;
       margin-bottom: 15px;
       @include font(demi);
     }
@@ -60,5 +67,28 @@
     align-items: center;
     height: 78px;
     border-top: 2px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media screen and (max-width: $maxPhoneWidth) {
+  .footer {
+    min-height: 500px;
+    padding-top: 55px;
+
+    &-section {
+      width: 50%;
+      height: 180px;
+      margin: 0 auto;
+      margin-bottom: 15px;
+
+      &:nth-child(even) {
+        padding-left: 15px;
+      }
+    }
+  }
+
+  &-text {
+    font-size: rem(14px);
+    margin-bottom: 5px;
   }
 }
