@@ -39,3 +39,10 @@ $width: 160px;
     color: $primaryColor;
   }
 }
+
+@media screen and (max-width: $maxPhoneWidth) {
+  .btn1,
+  .btn2 {
+    @include size(140px, 40px);
+  }
+}
