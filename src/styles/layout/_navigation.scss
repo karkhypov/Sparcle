@@ -12,25 +12,6 @@ header {
     color: white;
   }
 
-  .btn1 {
-    border-color: transparent;
-  }
-
-  .btn2 {
-    border-color: white;
-
-    svg {
-      @include size(16px);
-      fill: white;
-      margin-right: 3px;
-      transform: translateY(-2px);
-    }
-
-    a {
-      color: white;
-    }
-  }
-
   .container {
     max-width: 1210px;
   }
@@ -40,37 +21,48 @@ header {
     z-index: 1;
     top: 0;
     width: 100%;
-    transition: all 0.3s;
   }
 
   .show {
-    z-index: 1;
     opacity: 1;
     pointer-events: all;
-    margin: 0;
     transition: opacity 0.4s;
   }
 
-  .arrow {
-    position: absolute;
-    top: 94%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    @include size(52px, 40px);
-    opacity: 0.7;
-    transition: opacity 0.3s linear;
-
-    svg {
-      @include size(50px);
-      fill: white;
+  .sticky-nav {
+    .nav-wrapper {
+      background-color: $primaryColorTranslucent;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     }
 
-    &:hover {
-      opacity: 1;
-    }
+    .nav {
+      height: 50px;
+      padding-top: 0;
 
-    &:active {
-      opacity: 0.3;
+      &-logo {
+        &::after {
+          display: none;
+        }
+
+        &:hover a {
+          transition: all 0.3s;
+          color: $secondaryColor;
+        }
+      }
+
+      &-menu {
+        border-bottom: none;
+
+        &__item a {
+          &:hover {
+            color: $secondaryColor;
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+      }
     }
   }
 }
@@ -78,16 +70,18 @@ header {
 .nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  height: 50px;
-  margin-top: 36px;
+  height: 86px;
+  padding-top: 36px;
+  transition: all 0.3s;
 
   &-logo {
     position: relative;
     @include font(bold);
-    font-size: 30px;
+    font-size: rem(30px);
     line-height: $mainLineHeight;
+    transform: translateY(-5px);
+    cursor: pointer;
 
     &::after {
       content: url(../images/logo-icon.png);
@@ -100,14 +94,12 @@ header {
   &-menu {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     @include size(540px, 100%);
     border-bottom: 2px solid rgba(167, 168, 164, 0.2);
 
     &__item {
       position: relative;
       @include font(demi);
-      height: 100%;
       font-size: rem(15px);
 
       a {
@@ -115,19 +107,18 @@ header {
         justify-content: center;
         align-items: center;
         @include size(100%);
+        transition: all 0.3s;
         cursor: pointer;
 
         &::after {
           content: '';
           position: absolute;
-          top: 47px;
+          top: 46px;
           left: 0;
-          width: 100%;
-          height: 6px;
+          @include size(100%, 6px);
           background-color: $secondaryColor;
-          transition: opacity 0.3s linear;
-          border-radius: 1px;
           opacity: 0;
+          transition: opacity 0.5s;
         }
 
         &:hover::after {
@@ -138,33 +129,6 @@ header {
           opacity: 0.5;
         }
       }
-    }
-  }
-}
-
-.hero {
-  max-width: 700px;
-  padding-top: 220px;
-  margin-left: 7%;
-
-  &-heading {
-    @include font(bold);
-    font-size: rem(65px);
-    line-height: 1;
-  }
-
-  &-text {
-    @include font(regular);
-    font-size: rem(15px);
-    max-width: 425px;
-    margin-top: 30px;
-  }
-
-  &-buttons {
-    margin-top: 50px;
-
-    .btn1 {
-      margin-right: 25px;
     }
   }
 }
@@ -188,29 +152,27 @@ header {
 @media screen and (max-width: $maxPhoneWidth) {
   .nav {
     height: 50px;
-    margin-top: 0;
-    padding-bottom: 5px;
+    padding-top: 2px;
     background-color: $primaryColorTranslucent;
-    overflow-y: hidden;
 
     &-logo::after {
       display: none;
     }
 
     &-menu {
-      z-index: -1;
-      display: flex;
       position: absolute;
       top: 50px;
       left: 0;
+      display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 30px 0;
       @include size(100%, calc(100vh - 50px));
+      padding-top: 15px;
+      padding-bottom: 30px;
       background-color: $primaryColorTranslucent;
       border-bottom: none;
-      opacity: 0;
       pointer-events: none;
+      opacity: 0;
       transform: scale(1);
       transition: opacity 0.4s, visibility 0.4s;
 
@@ -228,23 +190,6 @@ header {
       }
     }
   }
-
-  .hero {
-    padding-top: calc(100vh / 4);
-    margin-left: 0;
-
-    &-heading {
-      font-size: rem(52px);
-    }
-
-    &-text {
-      font-size: rem(13px);
-    }
-  }
-
-  .arrow svg {
-    transform: scale(0.75);
-  }
 }
 
 @media screen and (max-width: $maxPhoneWidth) and (orientation: landscape) {
@@ -257,13 +202,5 @@ header {
         height: 15%;
       }
     }
-  }
-
-  .hero {
-    padding-top: 70px;
-  }
-
-  .arrow svg {
-    display: none;
   }
 }
