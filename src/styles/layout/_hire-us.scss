@@ -31,6 +31,18 @@
   }
 }
 
+@media screen and (max-width: 960px) {
+  .hireUs {
+    &-heading {
+      text-align: center;
+    }
+
+    &-text-block {
+      margin: 0 auto;
+    }
+  }
+}
+
 @media screen and (max-width: $maxPhoneWidth) {
   .hireUs {
     padding-top: 80px;

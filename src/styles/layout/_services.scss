@@ -52,12 +52,14 @@
   }
 }
 
+@media screen and (max-width: 716px) {
+  .services-card:last-child {
+    margin-top: 35px;
+  }
+}
+
 @media screen and (max-width: $maxPhoneWidth) {
   .services {
     padding-top: 60px;
-
-    &-card:last-child {
-      margin-top: 35px;
-    }
   }
 }

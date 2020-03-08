@@ -170,6 +170,13 @@
   }
 }
 
+@media screen and (max-width: 1056px) {
+  .booking-info-section {
+    height: auto;
+    padding: 25px 55px;
+  }
+}
+
 @media screen and (max-width: $maxPhoneWidth) {
   .booking {
     padding-top: 80px;
@@ -178,10 +185,14 @@
     &-info-section,
     &-form-section {
       width: 100%;
-      height: auto;
+    }
+
+    &-info-section {
+      padding: 0;
     }
 
     &-form-section {
+      height: auto;
       padding: 30px 20px;
     }
 
@@ -196,6 +207,7 @@
     }
 
     &-text {
+      max-width: 450px;
       margin-bottom: 30px;
       padding-right: 15px;
 
@@ -209,10 +221,6 @@
 
       &__heading {
         margin-bottom: 15px;
-      }
-
-      .btn1 {
-        margin-right: 10px;
       }
     }
 

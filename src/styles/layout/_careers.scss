@@ -1,6 +1,7 @@
 .careers {
   background: url(../images/hand.png) no-repeat;
   background-position: top 105px right 0;
+  background-size: 45% auto;
   background-color: $sectionBackground;
   min-height: 100vh;
 
@@ -36,6 +37,7 @@
   }
 
   &-text {
+    max-width: 435px;
     margin-bottom: 35px;
 
     span {
@@ -66,11 +68,36 @@
   }
 }
 
+@media screen and (max-width: 1060px) {
+  .careers {
+    background-size: 40% auto;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .careers {
+    background-image: none;
+
+    &-content {
+      margin: 0 auto;
+    }
+  }
+  .careers-image {
+    width: 100%;
+    margin-bottom: 25px;
+    transform: translateY(0);
+
+    &__dots {
+      display: none;
+    }
+  }
+}
+
 @media screen and (max-width: $maxPhoneWidth) {
   .careers {
     margin: 0 auto;
     padding-top: 65px;
-    background: none;
+    background-image: none;
 
     &-heading {
       &__primary {
@@ -79,15 +106,6 @@
         br {
           display: none;
         }
-      }
-    }
-
-    &-image {
-      margin-bottom: 25px;
-      transform: translateY(0);
-
-      &__dots {
-        display: none;
       }
     }
 

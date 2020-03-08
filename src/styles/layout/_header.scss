@@ -107,27 +107,36 @@ header {
     &__item {
       position: relative;
       @include font(demi);
+      height: 100%;
       font-size: rem(15px);
 
-      &::after {
-        content: '';
-        position: absolute;
-        top: 35px;
-        left: 0;
-        width: 100%;
-        height: 6px;
-        background-color: $secondaryColor;
-        transition: opacity 0.3s linear;
-        border-radius: 1px;
-        opacity: 0;
-      }
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include size(100%);
+        cursor: pointer;
 
-      &:hover::after {
-        opacity: 1;
-      }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 47px;
+          left: 0;
+          width: 100%;
+          height: 6px;
+          background-color: $secondaryColor;
+          transition: opacity 0.3s linear;
+          border-radius: 1px;
+          opacity: 0;
+        }
 
-      &:active {
-        opacity: 0.5;
+        &:hover::after {
+          opacity: 1;
+        }
+
+        &:active {
+          opacity: 0.5;
+        }
       }
     }
   }
@@ -160,6 +169,22 @@ header {
   }
 }
 
+@media screen and (max-width: 740px) {
+  .nav-menu {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 685px) {
+  .nav-menu {
+    width: 455px;
+
+    &__item {
+      font-size: rem(14px);
+    }
+  }
+}
+
 @media screen and (max-width: $maxPhoneWidth) {
   .nav {
     height: 50px;
@@ -185,21 +210,15 @@ header {
       background-color: $primaryColorTranslucent;
       opacity: 0;
       pointer-events: none;
+      transform: scale(1);
       transition: opacity 0.4s, visibility 0.4s;
 
       &__item {
         @include size(100%, 8%);
         font-size: 1.2rem;
 
-        &::after {
+        a::after {
           display: none;
-        }
-
-        a {
-          display: flex;
-          justify-content: center;
-          @include size(100%);
-          cursor: pointer;
         }
 
         &:hover a {
@@ -210,7 +229,6 @@ header {
   }
 
   .hero {
-    // padding-top: 160px;
     padding-top: calc(100vh / 4);
     margin-left: 0;
 
