@@ -203,8 +203,10 @@
                 <input
                   type="tel"
                   placeholder="Enter your phone number"
-                  pattern="^\+?([1-9]?\s?)?(\(\d{3}\)|\d{3})(\-|\s)?\d{3}(\-|\s)?\d{2}(\-|\s)?\d{2}$"
-                  title="Format: +7(077)777-77-77"
+                  pattern="^(\+?[1-9])?(\-|\s)?[1-9]?(\-|\s)?(\(\d{3}\)|\d{3})(\-|\s)?\d{3}(\-|\s)?\d{2}(\-|\s)?\d{2}$"
+                  title="Format: +7 7(077)777-77-77"
+                  minlength="10"
+                  maxlength="18"
                   required
                 />
                 <input type="email" placeholder="Enter your email address" required />
