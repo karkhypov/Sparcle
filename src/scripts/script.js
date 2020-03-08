@@ -1,1 +1,2 @@
-console.log('im working');
+import './navMenu';
+import './stickyNav';
