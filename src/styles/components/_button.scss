@@ -46,3 +46,10 @@ $width: 160px;
     @include size(140px, 40px);
   }
 }
+
+@media screen and (max-width: $minPhoneWidth) {
+  .btn1,
+  .btn2 {
+    @include size(125px, 35px);
+  }
+}

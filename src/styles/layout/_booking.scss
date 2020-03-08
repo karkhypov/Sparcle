@@ -1,7 +1,6 @@
 .booking {
   display: flex;
   flex-wrap: wrap;
-  min-height: 100vh;
   padding-top: 120px;
   padding-bottom: 160px;
 
@@ -231,5 +230,11 @@
         margin-right: 25px;
       }
     }
+  }
+}
+
+@media screen and (max-width: $minPhoneWidth) {
+  .booking-subtotal__price {
+    margin-left: 5px;
   }
 }

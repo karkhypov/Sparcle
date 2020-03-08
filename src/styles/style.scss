@@ -33,3 +33,10 @@ h3 {
 p {
   font-size: rem(14px);
 }
+
+@media screen and (max-width: $minPhoneWidth) {
+  html,
+  body {
+    font-size: calc(#{$mainFontSize} - 1px);
+  }
+}
