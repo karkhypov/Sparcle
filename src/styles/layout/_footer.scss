@@ -85,10 +85,14 @@
         padding-left: 15px;
       }
     }
-  }
 
-  &-text {
-    font-size: rem(14px);
-    margin-bottom: 5px;
+    &-text {
+      font-size: rem(14px);
+      margin-bottom: 5px;
+    }
+
+    &-copyright span {
+      width: 200px;
+    }
   }
 }
