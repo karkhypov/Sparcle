@@ -142,40 +142,66 @@
           </p>
           <div class="booking-type">
             <p class="booking-type__heading">Type of cleaning</p>
-            <button class="btn1">Residential</button>
-            <button class="btn2">Commercial</button>
+            <button id="residentialBtn" class="btn1" data-active="true">Residential</button>
+            <button id="commercialBtn" class="btn2" data-active="false">Commercial</button>
           </div>
           <div class="booking-options">
-            <div class="booking-option">
-              <p class="booking-option__heading">Number of bedrooms</p>
-              <div class="booking-option__switches">
-                <button class="booking-option__button">
-                  <svg>
-                    <use xlink:href="images/svg-sprite.svg#minus"></use>
-                  </svg>
-                </button>
-                <div class="booking-option__value">4</div>
-                <button class="booking-option__button">
-                  <svg>
-                    <use xlink:href="images/svg-sprite.svg#plus"></use>
-                  </svg>
-                </button>
+            <div class="booking-options__container">
+              <div id="residential" data-active="true">
+                <div class="booking-option">
+                  <p class="booking-option__heading">Number of bedrooms</p>
+                  <div class="booking-option__switches">
+                    <button class="booking-option__button">
+                      <svg>
+                        <use xlink:href="images/svg-sprite.svg#minus"></use>
+                      </svg>
+                    </button>
+                    <div class="booking-option__value" name="bedrooms">1</div>
+                    <button class="booking-option__button">
+                      <svg>
+                        <use xlink:href="images/svg-sprite.svg#plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="booking-option">
+                  <p class="booking-option__heading">Number of bathrooms</p>
+                  <div class="booking-option__switches">
+                    <button class="booking-option__button">
+                      <svg>
+                        <use xlink:href="images/svg-sprite.svg#minus"></use>
+                      </svg>
+                    </button>
+                    <div class="booking-option__value" name="bathrooms">1</div>
+                    <button class="booking-option__button">
+                      <svg>
+                        <use xlink:href="images/svg-sprite.svg#plus"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="booking-option">
-              <p class="booking-option__heading">Number of bathrooms</p>
-              <div class="booking-option__switches">
-                <button class="booking-option__button">
-                  <svg>
-                    <use xlink:href="images/svg-sprite.svg#minus"></use>
-                  </svg>
-                </button>
-                <div class="booking-option__value">2</div>
-                <button class="booking-option__button">
-                  <svg>
-                    <use xlink:href="images/svg-sprite.svg#plus"></use>
-                  </svg>
-                </button>
+
+              <div id="commercial" data-active="false" style="display: none;">
+                <div class="booking-option">
+                  <p class="booking-option__heading">Facility Type</p>
+                  <select class="booking-option__select" name="facility">
+                    <option disabled selected>Select Type</option>
+                    <option value="Business Offices">Business Offices</option>
+                    <option value="Government">Government</option>
+                    <option value="Medical & Healthcare">Medical & Healthcare</option>
+                    <option value="Fitness Centers">Fitness Centers</option>
+                    <option value="Schools and Universities">Schools and Universities</option>
+                    <option value="Commercial Kitchens">Commercial Kitchens</option>
+                    <option value="Construction Clean Up">Construction Clean Up</option>
+                    <option value="Industrial & Manufacturing">Industrial & Manufacturing</option>
+                    <option value="Religious Facilities">Religious Facilities</option>
+                  </select>
+                </div>
+                <div class="booking-option">
+                  <p class="booking-option__heading">Area</p>
+                  <input type="text" class="booking-option__input" name="area" placeholder="m²" maxlength="10" />
+                </div>
               </div>
             </div>
           </div>
@@ -185,16 +211,16 @@
           <div class="booking-subtotal">
             <h2 class="booking-subtotal__heading">
               Subtotal
-              <span class="booking-subtotal__price">130,00$</span>
+              <span class="booking-subtotal__price" data-value="130">130,00$</span>
             </h2>
             <p class="booking-subtotal__text">
-              <span class="booking-subtotal__type">Residential Cleaning - </span>
-              <span class="booking-subtotal__hours">5 hours</span>
+              <span class="booking-subtotal__type" data-value="Residential">Residential Cleaning - </span>
+              <span class="booking-subtotal__hours" data-value="5">5 hours</span>
             </p>
             <p class="booking-subtotal__text">
               <span class="booking-subtotal__includes">Includes: </span>
-              <span class="booking-subtotal__bedrooms">4 bedrooms</span>
-              <span class="booking-subtotal__bathrooms">2 bathrooms</span>
+              <span class="booking-subtotal__value" data-value="4">4 bedrooms</span>
+              <span class="booking-subtotal__value" data-value="2">2 bathrooms</span>
             </p>
           </div>
           <div class="booking-form">

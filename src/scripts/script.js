@@ -1,2 +1,3 @@
-import './navMenu';
 import './stickyNav';
+import './navMenu';
+import './booking';

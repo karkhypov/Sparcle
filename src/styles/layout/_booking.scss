@@ -41,13 +41,18 @@
       color: $secondaryColor;
     }
 
-    .btn1 {
+    button:first-of-type {
       margin-right: 25px;
     }
   }
 
   &-options {
-    display: flex;
+    height: 70px;
+
+    &__container #residential,
+    &__container #commercial {
+      display: flex;
+    }
   }
 
   &-option {
@@ -78,12 +83,16 @@
       transition: all 0.2s linear;
 
       &:hover {
+        border-color: $secondaryColor;
         opacity: 1;
         cursor: pointer;
+
+        svg {
+          fill: $secondaryColor;
+        }
       }
 
       &:active {
-        opacity: 0.8;
         transform: scale(0.9);
       }
 
@@ -96,6 +105,31 @@
     &__value {
       @include font(demi);
       font-size: rem(14px);
+    }
+
+    &__select,
+    &__input {
+      font-size: rem(14px);
+      height: 30px;
+      border: 1px solid rgba($secondaryFontColor, 0.3);
+
+      &:hover,
+      &:active {
+        border-color: $secondaryColor;
+      }
+    }
+
+    &__select {
+      cursor: pointer;
+    }
+
+    &__input {
+      @include size(110px, 30px);
+      padding: 0 10px;
+
+      &::placeholder {
+        color: $primaryColor;
+      }
     }
   }
 
