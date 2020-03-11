@@ -142,8 +142,8 @@
           </p>
           <div class="booking-type">
             <p class="booking-type__heading">Type of cleaning</p>
-            <button id="residentialBtn" class="btn1" data-active="true">Residential</button>
-            <button id="commercialBtn" class="btn2" data-active="false">Commercial</button>
+            <button id="residentialButton" class="btn1" data-active="true">Residential</button>
+            <button id="commercialButton" class="btn2" data-active="false">Commercial</button>
           </div>
           <div class="booking-options">
             <div class="booking-options__container">
@@ -151,14 +151,14 @@
                 <div class="booking-option">
                   <p class="booking-option__heading">Number of bedrooms</p>
                   <div class="booking-option__switches">
-                    <button class="booking-option__button">
+                    <button class="booking-option__button booking-bedrooms__minus">
                       <svg>
                         <use xlink:href="images/svg-sprite.svg#minus"></use>
                       </svg>
                     </button>
-                    <div class="booking-option__value" name="bedrooms">1</div>
-                    <button class="booking-option__button">
-                      <svg>
+                    <div id="bedrooms" class="booking-option__value" data-value="1">1</div>
+                    <button class="booking-option__button booking-bedrooms__plus">
+                      <svg class="plus">
                         <use xlink:href="images/svg-sprite.svg#plus"></use>
                       </svg>
                     </button>
@@ -167,14 +167,14 @@
                 <div class="booking-option">
                   <p class="booking-option__heading">Number of bathrooms</p>
                   <div class="booking-option__switches">
-                    <button class="booking-option__button">
+                    <button class="booking-option__button booking-bathrooms__minus">
                       <svg>
                         <use xlink:href="images/svg-sprite.svg#minus"></use>
                       </svg>
                     </button>
-                    <div class="booking-option__value" name="bathrooms">1</div>
-                    <button class="booking-option__button">
-                      <svg>
+                    <div id="bathrooms" class="booking-option__value" data-value="1">1</div>
+                    <button class="booking-option__button booking-bathrooms__plus">
+                      <svg class="plus">
                         <use xlink:href="images/svg-sprite.svg#plus"></use>
                       </svg>
                     </button>
@@ -186,7 +186,7 @@
                 <div class="booking-option">
                   <p class="booking-option__heading">Facility Type</p>
                   <select class="booking-option__select" name="facility">
-                    <option disabled selected>Select Type</option>
+                    <!-- <option disabled selected>Select Type</option> -->
                     <option value="Business Offices">Business Offices</option>
                     <option value="Government">Government</option>
                     <option value="Medical & Healthcare">Medical & Healthcare</option>
@@ -200,7 +200,7 @@
                 </div>
                 <div class="booking-option">
                   <p class="booking-option__heading">Area</p>
-                  <input type="text" class="booking-option__input" name="area" placeholder="m²" maxlength="10" />
+                  <input type="number" class="booking-option__input" name="area" placeholder="m²" min="100" max="10000" step="10" maxlength="5" />
                 </div>
               </div>
             </div>
@@ -211,33 +211,35 @@
           <div class="booking-subtotal">
             <h2 class="booking-subtotal__heading">
               Subtotal
-              <span class="booking-subtotal__price" data-value="130">130,00$</span>
+              <span class="booking-subtotal__price">130,00</span>
+              $
             </h2>
             <p class="booking-subtotal__text">
-              <span class="booking-subtotal__type" data-value="Residential">Residential Cleaning - </span>
-              <span class="booking-subtotal__hours" data-value="5">5 hours</span>
+              <span class="booking-subtotal__type">Residential Cleaning - </span>
+              <span class="booking-subtotal__hours">5 hours</span>
             </p>
-            <p class="booking-subtotal__text">
-              <span class="booking-subtotal__includes">Includes: </span>
-              <span class="booking-subtotal__value" data-value="4">4 bedrooms</span>
-              <span class="booking-subtotal__value" data-value="2">2 bathrooms</span>
+            <p class="booking-subtotal__description booking-subtotal__text">
+              Includes:
+              <span class="booking-subtotal__bedrooms">1 bedroom</span>
+              <span class="booking-subtotal__bathrooms">1 bathroom</span>
             </p>
           </div>
           <div class="booking-form">
-            <form action="POST" autocomplete="off">
+            <form autocomplete="off">
               <div class="booking-form__inputs">
                 <p class="booking-form__fullname">your full name</p>
-                <input type="text" placeholder="Vid Kraljić Radulović" required />
+                <input type="text" name="fullName" placeholder="Vid Kraljić Radulović" required />
                 <input
                   type="tel"
+                  name="phone"
                   placeholder="Enter your phone number"
-                  pattern="^(\+?[1-9])?(\-|\s)?[1-9]?(\-|\s)?(\(\d{3}\)|\d{3})(\-|\s)?\d{3}(\-|\s)?\d{2}(\-|\s)?\d{2}$"
+                  pattern="(\+?[1-9])?(-|\s)?[1-9]?(-|\s)?(\(\d{3}\)|\d{3})(-|\s)?\d{3}(-|\s)?\d{2}(-|\s)?\d{2}"
                   title="Format: +7 7(077)777-77-77"
                   minlength="10"
                   maxlength="18"
                   required
                 />
-                <input type="email" placeholder="Enter your email address" required />
+                <input type="email" name="email" placeholder="Enter your email address" required />
               </div>
               <button type="submit">
                 Continue booking
