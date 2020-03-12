@@ -25,7 +25,7 @@ const email = document.querySelector('input[name="email"]');
 function calculateSubtotal(facilityType) {
   if (facilityType) {
     subtotalPrice.textContent = (prices.commercial[facilityType].price || 100) * (area.value || 100);
-    subtotalHours.textContent = `${Math.ceil((prices.commercial[facilityType].hours || 1) * ((area.value || 100) / 50))} hours`;
+    subtotalHours.textContent = `${Math.ceil((prices.commercial[facilityType].time || 1) * ((area.value || 100) / 40))} hours`;
     return;
   }
   subtotalPrice.textContent =
