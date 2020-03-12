@@ -10,26 +10,26 @@ $halfSlideWidthMobile: 170px;
   position: absolute;
   top: 3px;
   left: calc(50% - #{$halfSlideWidth});
-  transition: all 0.5s;
+  transition: all 1s;
   transform: translateX(-475%);
 }
 
 .slide.next + .slide {
   z-index: -1;
-  transform: translateX(275%);
+  transform: translateX(475%);
 }
 
 .slide.prev {
   z-index: 1;
-  transform: translateX(-175%);
+  transform: translateX(-375%);
 }
 .slide.current {
   z-index: 1;
   transform: translateX(0);
 }
 .slide.next {
-  z-index: 1;
-  transform: translateX(175%);
+  z-index: -1;
+  transform: translateX(375%);
 }
 
 @media screen and (max-width: $maxPhoneWidth) {
