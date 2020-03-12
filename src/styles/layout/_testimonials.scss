@@ -1,34 +1,24 @@
 .testimonials {
-  //remove after slider implementation
-  position: relative;
   min-height: 1075px;
   padding: 130px 0;
   background-color: $sectionBackground;
   overflow-x: hidden;
 
   &-heading {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
   }
 
   &-cards {
     display: flex;
-    width: 100vw;
-    //remove after slider implementation
-    height: 400px;
-
-    margin-bottom: 150px;
+    @include size(100vw, 406px);
+    margin-bottom: 130px;
   }
 
   &-card {
-    //remove after slider implementation
-    position: absolute;
-    left: 0;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     @include size(400px);
-    margin-right: 100px;
     padding: 30px;
     padding-top: 50px;
     background-color: $backGround;
@@ -86,11 +76,22 @@
     &-heading {
       text-align: center;
       font-size: rem(28px);
-      margin-bottom: 25px;
+      margin-bottom: 50px;
     }
 
     &-cards {
+      height: 346px;
       margin-bottom: 45px;
+    }
+
+    &-card {
+      @include size(340px);
+      padding-top: 30px;
+    }
+
+    &-text {
+      font-size: rem(19px);
+      padding-top: 5px;
     }
 
     &-submit {
