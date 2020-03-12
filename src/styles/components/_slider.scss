@@ -20,11 +20,9 @@ $halfSlideWidthMobile: 170px;
 }
 
 .slide.prev {
-  z-index: 1;
   transform: translateX(-375%);
 }
 .slide.current {
-  z-index: 1;
   transform: translateX(0);
 }
 .slide.next {
