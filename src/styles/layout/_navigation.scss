@@ -31,6 +31,7 @@ header {
 
   .sticky-nav {
     .nav-wrapper {
+      z-index: 10;
       background-color: $primaryColorTranslucent;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     }
