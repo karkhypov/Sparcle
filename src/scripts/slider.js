@@ -1,14 +1,8 @@
 const slider = document.querySelector('.slider');
 
-let prev;
-let current;
-let next;
-
-function startSlider() {
-  current = slider.querySelector('.current') || slider.firstElementChild;
-  prev = current.previousElementSibling || slider.lastElementChild;
-  next = current.nextElementSibling || slider.firstElementChild;
-}
+let current = slider.querySelector('.current') || slider.firstElementChild;
+let prev = current.previousElementSibling || slider.lastElementChild;
+let next = current.nextElementSibling || slider.firstElementChild;
 
 function applyClasses() {
   current.classList.add('current');
@@ -24,7 +18,6 @@ function move() {
   applyClasses();
 }
 
-startSlider();
 applyClasses();
 
 setInterval(() => {
