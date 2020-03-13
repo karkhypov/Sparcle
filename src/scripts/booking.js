@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import prices from './booking-prices';
+import prices from './bookingPrices';
 
 const residential = document.querySelector('#residential');
 const commercial = document.querySelector('#commercial');
