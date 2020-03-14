@@ -1,4 +1,5 @@
-$modalWidth: 600px;
+$modalWidth: 55%;
+$modalHeight: 65%;
 $modalWidthMobile: 95%;
 
 .modal-overlay {
@@ -18,7 +19,7 @@ $modalWidthMobile: 95%;
   z-index: 100;
   position: fixed;
   top: 20%;
-  @include size($modalWidth, 450px);
+  @include size($modalWidth, $modalHeight);
   left: calc((100vw / 2) - (#{$modalWidth}/ 2));
   border: 5px solid $secondaryColor;
   opacity: 0;

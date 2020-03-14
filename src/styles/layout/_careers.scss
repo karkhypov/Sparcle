@@ -1,9 +1,9 @@
 .careers {
   background: url(../images/hand.png) no-repeat;
   background-position: top 105px right 0;
-  background-size: 45% auto;
+  background-size: 38% auto;
   background-color: $sectionBackground;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 
   &-content {
     max-width: 470px;
@@ -65,6 +65,12 @@
         transform: rotate(-45deg);
       }
     }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .careers {
+    background-size: 45% auto;
   }
 }
 

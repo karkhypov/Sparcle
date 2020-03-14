@@ -39,4 +39,8 @@ p {
   body {
     font-size: calc(#{$mainFontSize} - 1px);
   }
+
+  .hero-heading {
+    font-size: rem(45px);
+  }
 }

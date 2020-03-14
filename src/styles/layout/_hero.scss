@@ -44,7 +44,7 @@ header {
 
 .hero {
   max-width: 700px;
-  padding-top: 220px;
+  padding-top: calc(100vh / 3.5);
   margin-left: 7%;
 
   &-heading {
@@ -71,7 +71,6 @@ header {
 
 @media screen and (max-width: $maxPhoneWidth) {
   .hero {
-    padding-top: calc(100vh / 4);
     margin-left: 0;
 
     &-heading {
@@ -85,6 +84,12 @@ header {
 
   .arrow svg {
     transform: scale(0.75);
+  }
+}
+
+@media screen and (max-width: $minPhoneWidth) {
+  .hero-heading {
+    font-size: rem(45px);
   }
 }
 

@@ -102,3 +102,9 @@
     }
   }
 }
+
+@media screen and (max-width: $minPhoneWidth) {
+  .testimonials-card {
+    @include size(330px);
+  }
+}
