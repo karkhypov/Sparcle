@@ -3,35 +3,47 @@ $halfSlideWidthMobile: 170px;
 
 .slider {
   position: relative;
-  overflow: hidden;
 }
 
 .slide {
+  z-index: -1;
   position: absolute;
   top: 3px;
   left: calc(50% - #{$halfSlideWidth});
-  transition: all 1s;
-  transform: translateX(-475%);
-}
-
-.slide.next + .slide {
-  z-index: -1;
-  transform: translateX(475%);
-}
-
-.slide.prev {
-  transform: translateX(-375%);
-}
-.slide.current {
-  transform: translateX(0);
-}
-.slide.next {
-  z-index: -1;
   transform: translateX(375%);
+
+  &.before-prev,
+  &.prev,
+  &.current,
+  &.next {
+    transition: all 1s;
+    z-index: 0;
+  }
+
+  &.before-prev {
+    transform: translateX(-375%);
+  }
+
+  &.prev {
+    transform: translateX(-175%);
+  }
+
+  &.current {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    transform: translateX(0) scale(1.1);
+  }
+
+  &.next {
+    transform: translateX(175%);
+  }
 }
 
 @media screen and (max-width: $maxPhoneWidth) {
   .slide {
     left: calc(50% - #{$halfSlideWidthMobile});
+
+    &.current {
+      transform: translateX(0) scale(1);
+    }
   }
 }
