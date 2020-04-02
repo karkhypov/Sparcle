@@ -92,9 +92,9 @@ function submitForm() {
       },
     })
       .then(response => response.json())
-      .then(json => console.log(json));
+      .then(json => alert(`Data sent successfully to ${url}\n${JSON.stringify(json, null, ' ')}`));
   } catch (error) {
-    console.error('Error:', error);
+    alert('Error:', error);
   }
 }
 
