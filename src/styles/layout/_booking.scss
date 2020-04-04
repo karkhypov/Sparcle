@@ -12,9 +12,30 @@
   }
 
   &-form-section {
+    position: relative;
     color: white;
     padding: 50px 70px;
     background-color: $primaryColor;
+
+    .form-submitted {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: rem(30px);
+      @include size(100%);
+      background-color: rgba(0, 0, 0, 0.8);
+      opacity: 0;
+      transition: all 0.5s;
+      pointer-events: none;
+    }
+
+    .form-submitted-show {
+      opacity: 1;
+      pointer-events: all;
+    }
   }
 
   &-heading {

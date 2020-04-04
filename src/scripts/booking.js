@@ -23,6 +23,7 @@ const form = document.querySelector('.booking-form');
 const fullName = document.querySelector('input[name="fullName"]');
 const phone = document.querySelector('input[name="phone"]');
 const email = document.querySelector('input[name="email"]');
+const submitted = document.querySelector('.form-submitted');
 
 function swapType(activeButton, inactiveButton, activeType, inactiveType) {
   activeButton.className = 'btn1';
@@ -98,6 +99,11 @@ function submitForm() {
   }
 }
 
+function formSubmitted() {
+  submitted.classList.add('form-submitted-show');
+  setTimeout(() => submitted.classList.remove('form-submitted-show'), 2000);
+}
+
 calculateSubtotal();
 
 residential.addEventListener('click', e => {
@@ -149,4 +155,5 @@ form.addEventListener('submit', e => {
   e.preventDefault();
   submitForm();
   e.target.reset();
+  formSubmitted();
 });
