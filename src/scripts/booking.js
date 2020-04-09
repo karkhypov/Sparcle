@@ -24,6 +24,7 @@ const fullName = document.querySelector('input[name="fullName"]');
 const phone = document.querySelector('input[name="phone"]');
 const email = document.querySelector('input[name="email"]');
 const submitted = document.querySelector('.form-submitted');
+const submitResult = document.querySelector('.form-submitted__result');
 
 function swapType(activeButton, inactiveButton, activeType, inactiveType) {
   activeButton.className = 'btn1';
@@ -69,6 +70,17 @@ function calculateResidential(roomType, operator, result, postfix) {
   result.textContent = `${roomType.dataset.value} ${postfix}${roomType.dataset.value > 1 ? 's' : ''}`;
 }
 
+function formSubmitted(data) {
+  if (data) {
+    submitResult.querySelector('pre').textContent = data;
+    submitResult.classList.add('form-submitted-show');
+    setTimeout(() => submitResult.classList.remove('form-submitted-show'), 7000);
+  } else {
+    submitted.classList.add('form-submitted-show');
+    setTimeout(() => submitted.classList.remove('form-submitted-show'), 2000);
+  }
+}
+
 function submitForm() {
   const description = subtotalDescription.querySelectorAll('span');
   const url = 'https://jsonplaceholder.typicode.com/posts';
@@ -93,16 +105,13 @@ function submitForm() {
       },
     })
       .then(response => response.json())
-      .then(json => alert(`Data sent successfully to ${url}\n${JSON.stringify(json, null, ' ')}`));
+      .then(json => formSubmitted(JSON.stringify(json, null, ' ')));
   } catch (error) {
-    alert('Error:', error);
+    formSubmitted(error);
   }
 }
 
-function formSubmitted() {
-  submitted.classList.add('form-submitted-show');
-  setTimeout(() => submitted.classList.remove('form-submitted-show'), 2000);
-}
+
 
 calculateSubtotal();
 

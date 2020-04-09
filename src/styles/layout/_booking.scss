@@ -17,6 +17,14 @@
     padding: 50px 70px;
     background-color: $primaryColor;
 
+    .form-submitted,
+    .form-submitted__result {
+      background-color: rgba(0, 0, 0, 0.8);
+      opacity: 0;
+      transition: all 0.5s;
+      pointer-events: none;
+    }
+
     .form-submitted {
       position: absolute;
       top: 0;
@@ -26,10 +34,19 @@
       justify-content: center;
       font-size: rem(30px);
       @include size(100%);
-      background-color: rgba(0, 0, 0, 0.8);
-      opacity: 0;
-      transition: all 0.5s;
-      pointer-events: none;
+    }
+
+    .form-submitted__result {
+      position: fixed;
+      top: 60px;
+      left: 25px;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: rem(20px);
+
+      p {
+        font-size: rem(20px);
+      }
     }
 
     .form-submitted-show {
