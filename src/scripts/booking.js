@@ -70,8 +70,9 @@ function calculateResidential(roomType, operator, result, postfix) {
   result.textContent = `${roomType.dataset.value} ${postfix}${roomType.dataset.value > 1 ? 's' : ''}`;
 }
 
-function formSubmitted(data) {
+function formSubmitted(data, header) {
   if (data) {
+    submitResult.querySelector('p').textContent = header;
     submitResult.querySelector('pre').textContent = data;
     submitResult.classList.add('form-submitted-show');
     setTimeout(() => submitResult.classList.remove('form-submitted-show'), 7000);
@@ -104,10 +105,10 @@ function submitForm() {
         'Content-type': 'application/json; charset=UTF-8',
       },
     })
-      .then(response => response.json())
-      .then(json => formSubmitted(JSON.stringify(json, null, ' ')));
+    .then(response => response.json())
+    .then(json => modalSubmitted(JSON.stringify(json, null, ' '), 'Data sent successfully'));
   } catch (error) {
-    formSubmitted(error);
+    modalSubmitted(error, 'Error');
   }
 }
 
