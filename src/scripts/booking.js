@@ -105,10 +105,10 @@ function submitForm() {
         'Content-type': 'application/json; charset=UTF-8',
       },
     })
-    .then(response => response.json())
-    .then(json => modalSubmitted(JSON.stringify(json, null, ' '), 'Data sent successfully'));
+      .then(response => response.json())
+      .then(json => formSubmitted(JSON.stringify(json, null, ' '), 'Data sent successfully'));
   } catch (error) {
-    modalSubmitted(error, 'Error');
+    formSubmitted(error, 'Error');
   }
 }
 
