@@ -13,4 +13,4 @@ var e=document.querySelector(".hero .btn2"),o=document.querySelector(".modal-map
 },{}],"dPdB":[function(require,module,exports) {
 "use strict";require("./stickyNav"),require("./navMenu"),require("./booking"),require("./slider"),require("./modalMap");
 },{"./stickyNav":"WNaP","./navMenu":"KByA","./booking":"FMDg","./slider":"xStd","./modalMap":"zKjJ"}]},{},["dPdB"], null)
-//# sourceMappingURL=/app.0dfcc314.js.map
+//# sourceMappingURL=app.0dfcc314.js.map
